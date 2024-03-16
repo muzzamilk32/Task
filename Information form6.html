@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style6.css">
+  <title>Information Form</title>
+</head>
+
+<body>
+
+  <section>
+    <div class="container">
+      <h2>Information Form</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" placeholder="Enter your Full Name" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Enter your Email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Password</label>
+          <input type="password" placeholder="Enter your Password" id="Password" name="Password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Address</label>
+          <input type="address" placeholder="Enter your Address" id="Address" name="Address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="USA">Pakistan</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Saudi Arabia</option>
+            <option value="Australia">Australia</option>
+            <option value="Australia">Japan</option>
+          </select>
+        </div>
+
+        <div class="form-group radio">
+          <label for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+
+
+        <div class="form-group">
+          <label for="interests">Hobbies</label><br>
+          <input type="checkbox" class="checkbox" id="interest1" name="interest1"> Reading
+          <br>
+          <input type="checkbox" class="checkbox" id="interest2" name="interest2"> Listening Music
+          <br>
+          <input type="checkbox" class="checkbox" id="interest3" name="interest3"> Gardening
+          <br>
+          <input type="checkbox" class="checkbox" id="interest3" name="interest3"> Swimming
+          <br>
+          <input type="checkbox" class="checkbox" id="interest3" name="interest3"> Athletics
+          <br>
+          <a href="javavoid:;" id="checkAllButton">Check all that Apply</a>
+
+        </div>
+
+        <div class="form-group">
+          <label for="name">website</label>
+          <input type="website" placeholder="Enter your Website Url" id="website" name="website" required>
+        </div>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+      
+
+        <button type="submit">Send Report</button>
+        <button type="button" id="erase-report">Erase Report</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Get the "Check All Above" button
+    var checkAllButton = document.getElementById('checkAllButton');
+
+    // Add event listener to the button
+    checkAllButton.addEventListener('click', function () {
+      // Get all checkboxes above the button
+      var checkboxes = document.querySelectorAll('.checkbox');
+      // Loop through each checkbox
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = true; // Check the checkbox
+      });
+    });
+  </script>
+
+
+  <script>
+    // JavaScript code to handle erase report button
+    document.getElementById('erase-report').addEventListener('click', function () {
+      // Reset all form fields
+      document.querySelector('form').reset();
+    });
+  </script>
+
+</body>
+
+</html>
